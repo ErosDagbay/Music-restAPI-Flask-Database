@@ -56,7 +56,7 @@ class SongByID(Resource):
         db.session.commit()
         return {"message": "deleted"}
 
-
+# route registration
 api.add_resource(Songs, "/songs")
 api.add_resource(SongByID, "/songs/<int:id>")
 
@@ -64,3 +64,4 @@ if __name__ == "__main__":
     with app.app_context():
         db.create_all()
     app.run(debug=True)
+    
